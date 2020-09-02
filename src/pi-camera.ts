@@ -17,6 +17,7 @@ router.get('/img', function (req: Request, res: Response) {
     myCamera.snap()
         .then((result) => {
             // Your picture was captured
+            console.log(myCamera.output);
             res.sendFile(myCamera.output);
         })
         .catch((error) => {
